@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% from "_formhelpers.html" import render_field %}
+{% block content %}
+
+    <form action="" method="POST">
+        {{ form.csrf_token }}
+        {{ render_field(form.full_name)}}
+        <br> <br>
+        {{ render_field(form.email)}}
+        <br> <br>
+        {{ render_field(form.phone)}}
+        <br><br>
+        {{ render_field(form.comment)}}
+
+        <button type="submit">Submit</button>
+    </form>
+
+{% endblock %}

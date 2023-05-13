@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% from "_formhelpers.html" import render_field %}
+{% block content %}
+
+<form action="" method="POST">
+    {{ form.csrf_token }}
+    {{ render_field(form.movie_name)}}
+    <br> <br>
+    {{ render_field(form.producer)}}
+    <br> <br>
+    {{ render_field(form.year)}}
+    <br><br>
+    {{ render_field(form.your_point)}}
+
+    <button type="submit">Submit</button>
+</form>
+
+
+{% endblock %}
